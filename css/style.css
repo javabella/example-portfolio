@@ -1,0 +1,107 @@
+@font-face
+{
+    font-family: 'fira_sanslight';
+
+    src: url('../fonts/firasans-light.eot');
+    src: url('../fonts/firasans-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-light.woff') format('woff'),
+         url('../fonts/firasans-light.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, p, h1 {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: url("../img/bg.png") repeat left top white;
+	font-size: 10px;
+	color: #4a545d;
+}
+
+.clearfix:after,
+.clearfix::after
+{
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: "";
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #EFF3F7; 
+	background: -webkit-gradient(linear, left top, right top, from(#EFF3F7), color-stop(#1d667a), to(#EFF3F7)); 
+	background: -webkit-linear-gradient(left, #EFF3F7, #1d667a, #EFF3F7); 
+	background: -moz-linear-gradient(left, #EFF3F7, #1d667a, #EFF3F7); 
+	background: -o-linear-gradient(left, #EFF3F7, #1d667a, #EFF3F7); 
+	background: linear-gradient(to right, #EFF3F7, #1d667a, #EFF3F7);
+}
+
+/* .half-line for lte 9 */
+.half-line { 		
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.half-line.one {
+	filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFF3F7', endColorstr='#1d667a', GradientType=1);
+}
+
+.half-line.two {
+	filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d667a', endColorstr='#EFF3F7', GradientType=1);
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+
+#footer {
+	background: #EFF3F7;
+	font-family: fira_sanslight, sans-serif;
+	width: 100%;
+	min-height: 35px;
+	max-height: 78px;
+	
+}
+
+#footer .wrapper {
+	position: relative;
+}
+
+.login{
+	height: 32px;
+	width: 20px;
+	background: blue;
+	position: absolute;
+	top: 0;
+	left: 15%;
+	bottom: 0;
+	right: auto;
+	margin: auto;
+}
+
+.copyright {
+	font-size: 1.3em;
+	padding: 2.2em 16.5625%;
+	text-align: center;
+}
+
