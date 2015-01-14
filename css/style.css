@@ -26,6 +26,8 @@ body {
 	background: url("../img/bg.png") repeat left top white;
 	font-size: 10px;
 	color: #4a545d;
+	
+	min-width: 320px;
 }
 
 .clearfix:after,
@@ -51,7 +53,7 @@ body {
 	background: linear-gradient(to right, #EFF3F7, #1d667a, #EFF3F7);
 }
 
-/* .half-line for lte 9 */
+/* .half-line for lte IE 9 */
 .half-line { 		
 	width: 50%;
 	height: 100%;
@@ -66,11 +68,10 @@ body {
 	filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d667a', endColorstr='#EFF3F7', GradientType=1);
 }
 
-.wrapper {
+.layout {
 	width: 100%;
-	max-width: 1400px;
-	min-width: 320px;
 	margin: 0 auto;
+	max-width: 1400px;
 }
 
 
@@ -78,12 +79,10 @@ body {
 	background: #EFF3F7;
 	font-family: fira_sanslight, sans-serif;
 	width: 100%;
-	min-height: 35px;
-	max-height: 78px;
 	
 }
 
-#footer .wrapper {
+#footer .layout {
 	position: relative;
 }
 
