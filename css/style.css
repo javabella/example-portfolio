@@ -3,10 +3,21 @@
     font-style: normal;
     font-weight: normal;
 
+    src: url("../fonts/firasans-light.eot");
     src: url("../fonts/firasans-light.eot?#iefix") format("embedded-opentype"),
     url("../fonts/firasans-light.woff") format("woff"),
     url("../fonts/firasans-light.ttf") format("truetype");
-    src: url("../fonts/firasans-light.eot");
+}
+
+@font-face {
+    font-family: "fira_sansbook";
+    font-style: normal;
+    font-weight: normal;
+
+    src: url("../fonts/firasans-book.eot");
+    src: url("../fonts/firasans-book.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/firasans-book.woff") format("woff"),
+    url("../fonts/firasans-book.ttf") format("truetype");
 }
 
 html,
@@ -16,7 +27,9 @@ p,
 h1,
 ul,
 li,
-a {
+a,
+h1,
+h2 {
     padding: 0;
     margin: 0;
 }
@@ -34,6 +47,18 @@ body {
 
     color: #4a545d;
     background: url("../img/bg.png") repeat left top white;
+}
+
+h1 {
+    font-size: 2.7em;
+}
+
+h2 {
+    font-size: 2.1em;
+}
+
+li {
+    list-style-type: none;
 }
 
 .clearfix:after,
@@ -141,8 +166,6 @@ body {
     height: 47px;
     margin: 0 12px;
 
-    list-style-type: none;
-
     background-color: blue;
 }
 
@@ -156,6 +179,60 @@ body {
     height: 100%;
 }
 
+#main {
+    padding: 40px 0 120px;
+
+    font-family: fira_sansbook, sans-serif;
+}
+
+#sidebar {
+	width: 250px;
+}
+
+#sidebar .nav {
+    width: 100%;
+    background: #eff3f7; 
+	border-radius: 3px;
+    font-size: 2.1em;
+}
+
+#sidebar .nav li:first-child a {
+	border-radius: 3px 3px 0 0;
+}
+
+#sidebar .nav li:last-child a {
+	border-radius: 0 0 3px 3px;
+}
+
+#sidebar .nav a {
+	display: block;
+	padding: 28px;
+	text-decoration: none;
+	color: #959aa8;
+}
+
+
+#sidebar .nav a:hover  {
+	color: #3ba8c0;
+}
+
+#sidebar .nav a:active,
+#sidebar .nav .active a {
+	color: white;
+}
+
+#sidebar .nav .active a {
+	background: #3ba8c0;
+}
+
+.contacts h2 {
+    font-weight: normal;
+}
+
+
+
+
+
 #footer {
     width: 100%;
     height: 81px;
@@ -163,7 +240,7 @@ body {
 
     font-family: fira_sanslight, sans-serif;
 
-    background: #eff3f7;;
+    background: #eff3f7;
 }
 
 #footer .layout {
