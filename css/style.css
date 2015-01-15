@@ -1,4 +1,12 @@
 @font-face {
+    font-family: "proximanovacond-semibold";
+    font-style: normal;
+    font-weight: normal;
+
+    src: url("../fonts/ProximaNovaCond-Semibold.otf") format("opentype");
+}
+
+@font-face {
     font-family: "fira_sanslight";
     font-style: normal;
     font-weight: normal;
@@ -18,6 +26,17 @@
     src: url("../fonts/firasans-book.eot?#iefix") format("embedded-opentype"),
     url("../fonts/firasans-book.woff") format("woff"),
     url("../fonts/firasans-book.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "fira_sansmedium";
+    font-style: normal;
+    font-weight: normal;
+
+    src: url("../fonts/firasans-medium.eot");
+    src: url("../fonts/firasans-medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/firasans-medium.woff") format("woff"),
+    url("../fonts/firasans-medium.ttf") format("truetype");
 }
 
 html,
@@ -51,10 +70,12 @@ body {
 
 h1 {
     font-size: 2.7em;
+    font-weight: normal;
 }
 
 h2 {
     font-size: 2.1em;
+    font-weight: normal;
 }
 
 li {
@@ -91,17 +112,19 @@ li {
 }
 
 .half-line.one {
-    filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#EFF3F7", endColorstr="#1d667a", GradientType=1);
+    -webkit-filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#EFF3F7", endColorstr="#1d667a", GradientType=1);
+            filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#EFF3F7", endColorstr="#1d667a", GradientType=1);
 }
 
 .half-line.two {
-    filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#1d667a", endColorstr="#EFF3F7", GradientType=1);
+    -webkit-filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#1d667a", endColorstr="#EFF3F7", GradientType=1);
+            filter: progid:dximagetransform.Microsoft.gradient(startColorstr="#1d667a", endColorstr="#EFF3F7", GradientType=1);
 }
 
 .layout {
     height: 100%;
-    max-width: 1200px;
-    padding: 0 100px;
+    max-width: 120em;
+    padding: 0 3.5em;
     margin: 0 auto;
 }
 
@@ -134,7 +157,7 @@ li {
     height: 100%;
 }
 
-.logo {
+#header .logo {
     position: absolute;
     top: 0;
     right: auto;
@@ -148,7 +171,7 @@ li {
     background: url("../img/logo.png") no-repeat center center #eff3f7;
 }
 
-.socials {
+#header .socials {
     position: absolute;
     top: 0;
     right: 0;
@@ -160,83 +183,329 @@ li {
 }
 
 
-.socials > li {
+#header .socials > li {
     float: left;
     width: 47px;
     height: 47px;
-    margin: 0 12px;
+    margin: 0 1.2em;
 
     background-color: blue;
 }
 
-.socials > li:last-child {
+#header .socials > li:last-child {
     margin-right: 0;
 }
 
-.socials > li > a {
+#header .socials > li > a {
     display: block;
     width: 100%;
     height: 100%;
 }
 
 #main {
-    padding: 40px 0 120px;
+    padding: 42px 0 100px;
 
     font-family: fira_sansbook, sans-serif;
 }
 
+#main .layout {
+    max-width: 96em;
+}
+
+#main .block {
+    width: 100%;
+    padding: 1.3em 0;
+
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    background: #eff3f7;
+}
+
+#main .block,
+#sidebar > div {
+    margin-bottom: 24px;
+}
+
 #sidebar {
-	width: 250px;
+    float: left;
+    width: 25em;
+    margin-right: 1em;
 }
 
 #sidebar .nav {
     width: 100%;
-    background: #eff3f7; 
-	border-radius: 3px;
+
     font-size: 2.1em;
 }
 
-#sidebar .nav li:first-child a {
-	border-radius: 3px 3px 0 0;
+#sidebar .nav li {
+    width: 92%;
+    padding: 0 4%;
+
+    background: #eff3f7;
 }
 
-#sidebar .nav li:last-child a {
-	border-radius: 0 0 3px 3px;
+#sidebar .nav li:first-child {
+    -webkit-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+}
+
+#sidebar .nav li:last-child {
+    -webkit-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
 }
 
 #sidebar .nav a {
-	display: block;
-	padding: 28px;
-	text-decoration: none;
-	color: #959aa8;
+    display: block;
+    padding: .9em .8em;
+
+    text-decoration: none;
+
+    color: #959aa8;
+    border-bottom: 2px solid #eff3f7;
 }
 
 
-#sidebar .nav a:hover  {
-	color: #3ba8c0;
+#sidebar .nav a:hover {
+    color: #3ba8c0;
+    border-bottom: 2px solid #3ba8c0;
 }
 
 #sidebar .nav a:active,
 #sidebar .nav .active a {
-	color: white;
+    color: white;
+}
+
+#sidebar .nav .active {
+    color: white;
+    background: #3ba8c0;
 }
 
 #sidebar .nav .active a {
-	background: #3ba8c0;
+    border-bottom: 2px solid #3ba8c0;
 }
 
-.contacts h2 {
+#sidebar .contacts > div:first-child {
+    -webkit-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+}
+
+#sidebar .contacts > div:last-child {
+    -webkit-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+}
+
+#sidebar .caption {
+    padding: .7em 1.9em 0;
+
+    font-weight: normal;
+
+    color: white;
+    background: #3ba8c0;
+}
+
+#sidebar .contact {
+    position: relative;
+
+    padding: .34em 0;
+    padding-left: 4.9em;
+
+    font-size: 1.7em;
+
+    color: white;
+}
+
+#sidebar .contact:hover span {
+    text-decoration: underline;
+}
+
+
+#sidebar .mail {
+    background: #41b9d4;
+}
+
+#sidebar .phone {
+    background: #48cbe8;
+}
+
+#sidebar .skype {
+    background: #51daf8;
+}
+
+#sidebar .icon,
+#content .icon {
+    position: absolute;
+
+    background: blue;
+}
+
+#sidebar .icon.mail {
+    top: .6em;
+    left: 2.45em;
+
+    width: 21px;
+    height: 16px;
+}
+
+#sidebar .icon.phone {
+    top: .4em;
+    left: 2.6em;
+
+    width: 19px;
+    height: 21px;
+}
+
+#sidebar .icon.skype {
+    top: .5em;
+    left: 2.5em;
+
+    width: 20px;
+    height: 20px;
+}
+
+#content {
+    float: right;
+    width: 65em;
+}
+
+#content h1 {
+    display: inline;
+    padding: .464em .8518em;
+
+    color: #3ba8c0;
+    border-bottom: 2px solid #3ba8c0;;
+}
+
+#content h1 + div {
+    margin-top: 5em;
+}
+
+#content .info h1 + div {
+    margin-top: 3.2em;
+}
+
+#content p {
+    font-size: 1.5em;
+}
+
+#content b {
+    font-size: 1.133333333em;
     font-weight: normal;
 }
 
+#content .info b {
+    padding-right: .9em;
 
+    font-family: fira_sansmedium, sans-serif;
+}
 
+#content .experience p,
+#content .education p {
+    font-family: fira_sanslight, sans-serif;
+    line-height: 1.4em;
+}
 
+#content .experience b,
+#content .education b {
+    font-family: fira_sansbook, sans-serif;
+    line-height: 1em;
+}
+
+#content .info {
+    position: relative;
+}
+
+#content .info > div {
+    padding-left: 26em;
+}
+
+#content .info p {
+    padding-bottom: .95em;
+}
+
+#content .info .photo-profile {
+    position: absolute;
+    top: 8.5em;
+    left: 2.3em;
+
+    width: 18.9em;
+    height: 18.9em;
+
+    border: 0.5em solid #3ba8c0;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: white;
+}
+
+#content .skills {
+    display: table;
+}
+
+#content .skills p,
+#content .skills ul {
+    display: table-cell;
+}
+
+#content .skills p {
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+#content .skills li {
+    display: inline-block;
+    padding: .2em 1em;
+    margin: 0 .1em .6em .3em;
+
+    font-family: proximanovacond-semibold, sans-serif;
+    font-size: 1.4em;
+
+    color: white;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #3ba8c0), color-stop(50%, #2e8ba2));
+    background: -webkit-linear-gradient(top, #3ba8c0 50%, #2e8ba2 50%);
+    background:    -moz-linear-gradient(top, #3ba8c0 50%, #2e8ba2 50%);
+    background:      -o-linear-gradient(top, #3ba8c0 50%, #2e8ba2 50%);
+    background:         linear-gradient(to bottom, #3ba8c0 50%, #2e8ba2 50% );
+    background-color: #3ba8c0;
+}
+
+#content .experience > div,
+#content .education > div {
+    padding-right: 2em;
+    padding-left: 13.1em;
+    margin-bottom: 2.7em;
+    position: relative;
+}
+
+#content .work {
+	width: 36px;
+	height: 34px;
+
+	top: 0em;
+	left: 6.5em;
+}
+
+#content .stud {
+	width: 41px;
+	height: 23px;
+
+	top: 0.2em;
+	left: 6.2em;
+}
+
+#content .course {
+	width: 26px;
+	height: 32px;
+	
+	top: 0em;
+	left: 7em;
+}
 
 #footer {
     width: 100%;
-    height: 81px;
-    margin-top: -81px;
+    height: 8.1em;
+    margin-top: -8.1em;
 
     font-family: fira_sanslight, sans-serif;
 
@@ -247,10 +516,10 @@ li {
     position: relative;
 
     display: table;
-    height: 78px;
+    height: 7.8em;
 }
 
-.login {
+#footer .login {
     position: absolute;
     top: 0;
     right: auto;
@@ -264,7 +533,7 @@ li {
     background: blue;
 }
 
-.copyright {
+#footer .copyright {
     display: table-cell;
     width: 100%;
     height: 100%;
@@ -297,12 +566,12 @@ li {
     }
 
     #footer {
-        height: 55px;
-        margin-top: -55px;
+        height: 5.5em;
+        margin-top: -5.5em;
     }
 
     #footer .layout {
-        height: 53px;
+        height: 5.3em;
     }
 
     .login {
