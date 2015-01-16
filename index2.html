@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Обо мне @_@ Lena - pro-verstalka</title>
+	<title>Связаться со мной *щ* Lena - pro-verstalka</title>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
@@ -46,9 +46,9 @@
 				<div id="sidebar">
 					<div class="nav">
 						<ul>
-							<li class="active"><a href="index.html">Обо мне</a></li>
+							<li><a href="index.html">Обо мне</a></li>
 							<li><a href="index1.html">Мои работы</a></li>
-							<li><a href="index2.html">Связаться со мной</a></li>
+							<li class="active"><a href="index2.html">Связаться со мной</a></li>
 						</ul>
 					</div>
 					<div class="contacts">
@@ -67,59 +67,46 @@
 						</div>
 					</div>
 				</div>
-				<div id="content" id="about">
-					<div class="block info">
-						<h1>Основная информация</h1>
-						<div>
-							<div class="photo-profile"></div>
-							<p><b>Меня зовут: </b>Павлова Елена Михайловна</p>
-							<p><b>Мой возраст: </b> 22 лет</p>
-							<p><b>Мой город: </b>Санкт-Петербург</p>
-							<p><b>Моя специализация: </b>FRONTEND разработчик</p>
-							<div class="skills">
-								<p><b>Ключевые навыки: </b></p>
-								<ul>
-									<li>html</li>
-									<li>css</li>
-									<li>javascript</li>
-									<li>gulp</li>
-									<li>git</li>
-								</ul>
+				<div id="content" id="call-me">
+					<div class="block callme">
+						<h1>У вас интересный проект? Напишите мне</h1>
+						<form>
+							<div class="clearfix">
+								<div class="left">
+									<p>Имя</p> 
+									<input type="text" name="client-name" placeholder="Как к Вам обращаться" required>
+								</div>
+								<div class="right">
+									<p>Email</p>
+									<input type="email" name="client-email" placeholder="Куда мне писать" required>
+								</div>
 							</div>
-								
-						</div>
-						
-					</div>
-					<div class="block experience">
-						<h1>Опыт работы</h1>
-						<div>
-							<div class="icon work"></div>
-							<p><b>"ИП Палий" - Верстальщик</b></p>
-							<p>Октябрь 2014 - по настоящее время</p>
-						</div>
-						<div>
-							<div class="icon work"></div>
-							<p><b>"Сам себе работник" - Фрилансер</b></p>
-							<p>Январь 2014 - Октябрь 2014</p>
-						</div>
-						<div>
-							<div class="icon work"></div>
-							<p><b>"Happy Partner" - Рождественский эльф</b></p>
-							<p>Октябрь 2013 - Январь 2014</p>
-						</div>
-					</div>
-					<div class="block education">
-						<h1>Образование</h1>
-						<div>
-							<div class="icon stud"></div>
-							<p><b>Законченное высшее. СПБГПУ Политех</b></p>
-							<p>Сентябрь 2009 - Июль 2013</p>
-						</div>
-						<div>
-							<div class="icon course"></div>
-							<p><b>Курсы Loftschool.ru</b></p>
-							<p>Январь 2015 - по настоящее время</p>
-						</div>
+							
+							<p>Сообщение</p>
+							<textarea placeholder="Кратко в чем суть" required></textarea>
+
+							<p class="smaller">Введите код, указанный на картинке</p>
+							<div class="clearfix capcha-row">
+								<div class="left">
+									<div class="capcha"></div>	
+								</div>
+								<div class="right">
+									<input id="enter-capcha" type="text" placeholder="Введите код" name="client-capcha">
+								</div>
+							</div>
+
+							<div class="clearfix btn-row">
+								<div class="left">
+									<input class="btn" type="submit" value="Отправить">
+								</div>
+								<div class="right">
+									<input class="btn" type="reset" value="Очистить">
+								</div>
+							</div>
+							
+							
+							
+						</form>
 					</div>
 				</div>
 				
