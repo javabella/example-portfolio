@@ -93,14 +93,12 @@
 								<p>Информаця о проекте 1 превью 2 строки...</p>
 							</div>
 							<div id="add-btn" class="project">
-								<div class="preview">
+								<div class="preview-add">
 									<div class="icon addproj"></div>
 									<p>Добавить проект</p>
 								</div>
 							</div>	
 						</div>
-						
-						
 					</div>
 				</div>
 				
@@ -113,11 +111,43 @@
 			<div class="half-line two"></div>
 		</div>
 		<div class="layout">
-			<div class="login"></div>
+			<div class="login"><a href="index4.html"></a></div>
 			<p class="copyright">&#169; 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
 		</div>
-		
 	</div>
 	
+	<div id="mask"></div>
+	
+	<div id="add-project" class="block">
+		<h1>Добавление проекта</h1>
+		<div class="icon close"></div>
+		<form>
+			<p class="proname">Название проекта</p>
+			<input type="text" name="proj-name" placeholder="Введите название" required>
+			<p>Картинка проекта</p>
+			<div class="input-wrapper">
+				<span id="file-name">Загрузите изображение</span>
+				<label for="file"></label>
+				<input id="file" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение">
+			</div>
+			
+			<p>URL проекта</p>
+			<input type="text" name="proj-url" placeholder="Добавьте ссылку" required>
+			<p>Описание</p>
+			<textarea type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте" required></textarea>
+			<input class="btn" type="submit" value="Добавить">	
+		</form>
+		
+	</div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(
+			$('#file').change(function(){
+				var lol = $(this).val();
+				$('#file-name').html(lol);
+			})
+		);
+		
+	</script>
 </body>
 </html>
