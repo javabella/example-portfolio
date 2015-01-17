@@ -1,11 +1,12 @@
 @font-face {
-    font-family: 'fira_sansregular';
-    src: url('../fonts/firasans-regular.eot');
-    src: url('../fonts/firasans-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/firasans-regular.woff') format('woff'),
-         url('../fonts/firasans-regular.ttf') format('truetype');
-    font-weight: normal;
+    font-family: "fira_sansregular";
     font-style: normal;
+    font-weight: normal;
+
+    src: url("../fonts/firasans-regular.eot");
+    src: url("../fonts/firasans-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/firasans-regular.woff") format("woff"),
+    url("../fonts/firasans-regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -360,7 +361,7 @@ li {
 }
 
 #sidebar .icon.mail {
-    top: 0.6em;
+    top: .6em;
     left: 2.45em;
 
     width: 21px;
@@ -376,7 +377,7 @@ li {
 }
 
 #sidebar .icon.skype {
-    top: 0.5em;
+    top: .5em;
     left: 2.5em;
 
     width: 20px;
@@ -390,7 +391,7 @@ li {
 
 #content h1 {
     display: inline;
-    padding: 0.464em 0.8518em;
+    padding: .464em .8518em;
 
     color: #3ba8c0;
     border-bottom: 2px solid #3ba8c0;
@@ -568,6 +569,8 @@ li {
 
 #content .preview,
 #content .preview-add {
+    position: relative;
+
     width: 179px;
     height: 125px;
 
@@ -575,8 +578,6 @@ li {
     -webkit-border-radius: 5px;
             border-radius: 5px;
     background-color: #eff3f7;
-
-    position: relative;
 }
 
 
@@ -586,28 +587,28 @@ li {
     right: 0;
     left: 0;
 
-    
+    display: none;
     margin: auto;
     margin-top: -.6em;
 
     font-size: 1.2em;
 
     color: white;
-    display: none;
 }
 
 #content .preview > span > span {
-    text-transform: lowercase;
+    display: none;
     padding: 0 .5em;
 
+    text-transform: lowercase;
+
     border: 2px solid white;
-    border-radius: 6px;
-    display: none;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
 }
 
 #content .preview::after {
     display: none;
- 
     width: 100%;
     height: 100%;
 
@@ -679,8 +680,9 @@ li {
 
     color: white;
     border-bottom: 17px solid #67dffa;
+    -webkit-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
     background-color: #48cbe8;
-    border-radius: 4px 4px 0 0;
 }
 
 #content .callme form {
@@ -689,7 +691,7 @@ li {
 }
 
 #content .callme p,
-#authoriz p  {
+#authoriz p {
     font-family: fira_sanslight, sans-serif;
     font-size: 1.9em;
     line-height: 1.45em;
@@ -706,6 +708,12 @@ li {
 input:not([type="submit"]):not([type="reset"]),
 textarea,
 #add-project .input-wrapper {
+    width: 100%;
+    padding: .6em .6em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
     font-family: fira_sanslight, sans-serif;
     font-size: 1.3em;
 
@@ -713,12 +721,6 @@ textarea,
     border: 1px solid #48cbe8;
     -webkit-border-radius: 4px;
             border-radius: 4px;
-
-    width: 100%;
-    padding: .6em .6em;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
 }
 
 textarea {
@@ -810,61 +812,69 @@ textarea {
 }
 /*****************call-me END*****************/
 #authoriz {
-	width: 100%;
-	min-height: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
 }
 
 #authoriz .block {
-	width: 59em;
-	margin: 0 auto;
-	text-align: center;
-	background: #eff3f7; 
-	box-shadow: 0 4px 7px rgba(0,0,0,0.3);
+    width: 59em;
+    margin: 0 auto;
+
+    text-align: center;
+
+    background: #eff3f7;
+    -webkit-box-shadow: 0 4px 7px rgba(0,0,0,.3);
+            box-shadow: 0 4px 7px rgba(0,0,0,.3);
 }
 
 #authoriz h1 {
-	border-bottom: 15px solid #67dffa;
-	font-size: 4em;
-	padding: 0.45em 0 0.3em;
+    padding: .45em 0 .3em;
+
+    font-size: 4em;
+
+    border-bottom: 15px solid #67dffa;
 }
 
 #authoriz p {
-	font-size: 3.6em;
-	padding: 0.5em 0 0.1em;
+    padding: .5em 0 .1em;
+
+    font-size: 3.6em;
 }
 
 #authoriz .pass {
-	padding-top: 0.4em;
+    padding-top: .4em;
 }
 
 #authoriz form {
-	margin: 0 8.3em;
+    margin: 0 8.3em;
 }
 
 #authoriz input {
-	font-size: 1.7em;
-	padding: 0.95em 1em 0.99em;
+    padding: .95em 1em .99em;
+
+    font-size: 1.7em;
 }
 
 #authoriz .btn {
+    padding: 0 1.74em;
     margin-top: 1em;
-    font-size: 3.6em;
-    border-bottom: 4px solid #3ba8c0;
-    padding: 0em 1.74em;
-    line-height: 1.4em;
-    border-radius: 10px;
-    margin-bottom: 0.65em;
+    margin-bottom: .65em;
 
+    font-size: 3.6em;
+    line-height: 1.4em;
+
+    border-bottom: 4px solid #3ba8c0;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
 }
 
 #authoriz ~ #footer {
     margin-top: -18.1em;
-
 }
 
 #main.enter {
-	padding-top: 5%;
+    padding-top: 5%;
 }
 
 #footer {
@@ -899,9 +909,9 @@ textarea {
 }
 
 #footer .login a {
-	display: block;
-	height: 100%;
-	width: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #footer .copyright {
@@ -917,104 +927,123 @@ textarea {
 }
 
 #mask {
-	height: 100%;
-	width: 100%;
-	background: rgba(88,105,122,0.75);
-	position: fixed;
-	top: 0;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(88,105,122,.75);
 }
 
 #add-project {
-	width: 36.2em;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	left: 0;
-	right: 0;
-	margin-top: 5%;
-	padding: 0;
-	height: 48.4em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 36.2em;
+    height: 48.4em;
+    padding: 0;
+    margin: auto;
+    margin-top: 5%;
 }
 
 #add-project h1 {
-	font-family: fira_sansregular, sans-serif;
-	font-size: 2.5em;
-	text-align: left;
-	padding: 0.25em 1em 0em 0.5em;
-	border-bottom: 9px solid #67dffa;
+    padding: .25em 1em 0 .5em;
+
+    font-family: fira_sansregular, sans-serif;
+    font-size: 2.5em;
+
+    text-align: left;
+
+    border-bottom: 9px solid #67dffa;
 }
 
 #add-project p {
-	font-family: fira_sansbook, sans-serif;
-	font-size: 1.7em;
-	color: #959aa8;
-	padding-top: 0.4em;
-	text-align: left;
+    padding-top: .4em;
+
+    font-family: fira_sansbook, sans-serif;
+    font-size: 1.7em;
+
+    text-align: left;
+
+    color: #959aa8;
 }
 
 #add-project .proname {
-	padding-top: 0.3em;
+    padding-top: .3em;
 }
 
 
 #add-project form {
-	padding: 0 2.1em;
-	text-align: center;
+    padding: 0 2.1em;
+
+    text-align: center;
 }
 
 #add-project input,
 #add-project textarea,
 #add-project .input-wrapper {
-	padding: 0.7em 0.6em;
+    padding: .7em .6em;
 }
 
 #add-project .input-wrapper {
-	text-align: left;
-	background: white;
-	color: #48cbe8;
-	position: relative;
-	padding-right: 6em;
+    position: relative;
+
+    padding-right: 6em;
+
+    text-align: left;
+
+    color: #48cbe8;
+    background: white;
 }
 
 #add-project .input-wrapper input {
-	display: none;
+    display: none;
 }
 
 #add-project .input-wrapper label {
-	height: 3.09em;
-	width: 5.2em;
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: #48CBE8;
-	border-radius: 0 3px 3px 0;
-	cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 5.2em;
+    height: 3.09em;
+
+    cursor: pointer;
+
+    -webkit-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+    background: #48cbe8;
 }
 
 #add-project .input-wrapper span {
-    word-wrap: normal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
 }
 
 #add-project textarea {
-	height: 8.55em;
+    height: 8.55em;
 }
 
 #add-project .btn {
-	padding: 0 1.44em;
-	margin-top: 0.7em;
+    padding: 0 1.44em;
+    margin-top: .7em;
 }
 
 #add-project .icon {
-	height: 25px;
-	width: 25px;
-	top: 1em;
-	right: 1.2em;
+    top: 1em;
+    right: 1.2em;
+
+    width: 25px;
+    height: 25px;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 321px) {
