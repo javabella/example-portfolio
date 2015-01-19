@@ -74,16 +74,28 @@
 							<div class="clearfix">
 								<div class="left">
 									<p>Имя</p> 
-									<input type="text" name="client-name" placeholder="Как к Вам обращаться" required>
+									<div class="input-wrapper cli-name">
+										<input id="error" type="text" name="client-name" placeholder="Как к Вам обращаться" required>
+										<div class="tooltip">Вы не ввели имя<div class="icon arrow to-right"></div></div>
+									</div>
+									
 								</div>
 								<div class="right">
 									<p>Email</p>
-									<input type="email" name="client-email" placeholder="Куда мне писать" required>
+									<div class="input-wrapper cli-email">
+										<input id="error" type="email" name="client-email" placeholder="Куда мне писать" required>	
+										<div class="tooltip">Вы не ввели email<div class="icon arrow to-left"></div></div>
+									</div>
+									
 								</div>
 							</div>
 							
 							<p>Сообщение</p>
-							<textarea placeholder="Кратко в чем суть" required></textarea>
+							<div class="input-wrapper cli-message">
+								<textarea id="error" name="client-message" placeholder="Кратко в чем суть" required></textarea>	
+								<div class="tooltip">Ваш вопрос<div class="icon arrow to-right"></div></div>
+							</div>
+							
 
 							<p class="smaller">Введите код, указанный на картинке</p>
 							<div class="clearfix capcha-row">
@@ -91,7 +103,12 @@
 									<div class="capcha"></div>	
 								</div>
 								<div class="right">
-									<input type="text" placeholder="Введите код" name="client-capcha">
+									<div class="input-wrapper cli-capcha">
+										<input id="error" type="text" placeholder="Введите код" name="client-capcha">
+										<div class="tooltip one">Вы не ввели код<div class="icon arrow to-left"></div></div>
+										<div class="tooltip two">Неправильный код<div class="icon arrow to-left"></div></div>	
+									</div>
+									
 								</div>
 							</div>
 

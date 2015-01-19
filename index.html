@@ -33,7 +33,18 @@
 						<li class="icon tw"><a href="/"></a></li>
 						<li class="icon fb"><a href="/"></a></li> 
 						<li class="icon git"><a href="/"></a></li>
-					</ul>	
+					</ul>
+					<div class="icon menu" id="menu"></div>	
+					<div class="icon arr to-top"></div>
+					<div id="pop-nav">
+						<div class="nav">
+							<ul>
+								<li class="active"><a href="index.html">Обо мне</a></li>
+								<li><a href="index1.html">Мои работы</a></li>
+								<li><a href="index2.html">Связаться со мной</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>	
 			</div>
 			<div class="line clearfix">
@@ -122,10 +133,27 @@
 						</div>
 					</div>
 				</div>
-				
+			</div>
+
+			<div id="contacts-bottom" class="clearfix">
+				<div class="contact phone">
+					<div class="icon phone"></div>
+					<span>+70101010101</span>
+				</div>
+				<div class="contact mail">
+					<div class="icon mail"></div>
+					<span>isuzu69@gmail.com</span>
+				</div>
+				<div class="contact skype">
+					<div class="icon skype"></div>
+					<span>isuzu69</span>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	
+
 	<div id="footer">
 		<div class="line clearfix">
 			<div class="half-line one"></div>
@@ -138,5 +166,31 @@
 		
 	</div>
 	
+
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			var firstLi = $('.nav li:first-child');
+			var triangle = $('.icon.arr.to-top');
+			if (firstLi.hasClass('active')) {
+				triangle.addClass('blue');;
+			} else {
+				triangle.removeClass('blue');
+			}
+
+			$('#menu').on('click', function()  {
+				if ($('#pop-nav').css('display') === 'none') {
+					$('#header .arr').fadeIn();
+					$('#pop-nav').fadeIn();
+				} else {
+					$('#header .arr').fadeOut();
+					$('#pop-nav').fadeOut();
+				}
+			});
+
+			
+		});
+	</script>
 </body>
 </html>

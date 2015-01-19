@@ -85,6 +85,7 @@ body {
     min-width: 320px;
 
     font-size: 10px;
+    font-family: fira_sansbook, sans-serif;
 
     color: #4a545d;
     background: url("../img/bg.png") repeat left top white;
@@ -156,6 +157,7 @@ li {
     min-height: 100%;
 }
 
+
 #header {
     width: 100%;
     height: 116px;
@@ -190,7 +192,7 @@ li {
     height: 57px;
     margin: auto;
 
-    background: url("../img/logo.png") no-repeat center center #eff3f7;
+    background-color: #eff3f7;
 }
 
 #header .socials {
@@ -231,35 +233,48 @@ li {
 }
 
 .icon.fb {
-  background-position: -0px -0px;
+  	background-position: -0px -0px;
 }
 
 .icon.fb:hover {
-  background-position: -94px -47px;
+  	background-position: -94px -0px;
 }
 
 .icon.git {
-  background-position: -47px -0px;
+  	background-position: -47px -0px;
 }
 
 .icon.git:hover {
-  background-position: -0px -94px;
+  	background-position: -94px -47px;
 }
 
 .icon.tw {
-  background-position: -0px -47px;
+  	background-position: -47px -94px;
 }
 
 .icon.tw:hover {
-  background-position: -47px -47px;
+  	background-position: -0px -47px;
 }
 
 .icon.vk {
-  background-position: -47px -94px;
+  	background-position: -0px -94px;
 }
 
 .icon.vk:hover{
-  background-position: -94px -0px;
+	background-position: -47px -47px;
+}
+
+.icon.menu {
+	background-position: -98px -141px;
+	height: 21px;
+	width: 25px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 1.1em;
+	display: none;
+	cursor: pointer;
 }
 
 #main {
@@ -292,30 +307,34 @@ li {
     margin-right: 1em;
 }
 
-#sidebar .nav {
+.nav {
     width: 100%;
 
     font-size: 2.1em;
 }
 
-#sidebar .nav li {
+.nav li {
     width: 92%;
     padding: 0 4%;
 
     background: #eff3f7;
 }
 
-#sidebar .nav li:first-child {
+#pop-nav li {
+	background: white;
+}
+
+.nav li:first-child {
     -webkit-border-radius: 3px 3px 0 0;
             border-radius: 3px 3px 0 0;
 }
 
-#sidebar .nav li:last-child {
+.nav li:last-child {
     -webkit-border-radius: 0 0 3px 3px;
             border-radius: 0 0 3px 3px;
 }
 
-#sidebar .nav a {
+.nav a {
     display: block;
     padding: .9em .8em;
 
@@ -325,23 +344,31 @@ li {
     border-bottom: 2px solid #eff3f7;
 }
 
+#pop-nav a {
+	border-color: white;
+}
 
-#sidebar .nav a:hover {
+
+.nav a:hover,
+#pop-nav a:hover {
     color: #3ba8c0;
     border-bottom: 2px solid #3ba8c0;
 }
 
-#sidebar .nav a:active,
-#sidebar .nav .active a {
+.nav a:active,
+.nav .active a,
+#pop-nav .nav .active a {
     color: white;
 }
 
-#sidebar .nav .active {
+.nav .active,
+#pop-nav .active {
     color: white;
     background: #3ba8c0;
 }
 
-#sidebar .nav .active a {
+.nav .active a,
+#pop-nav .active a {
     border-bottom: 2px solid #3ba8c0;
 }
 
@@ -364,7 +391,7 @@ li {
     background: #3ba8c0;
 }
 
-#sidebar .contact {
+.contact {
     position: relative;
 
     padding: .34em 0;
@@ -375,20 +402,20 @@ li {
     color: white;
 }
 
-#sidebar .contact:hover span {
+.contact:hover span {
     text-decoration: underline;
 }
 
 
-#sidebar .contact.mail {
+.contact.mail {
     background: #41b9d4;
 }
 
-#sidebar .contact.phone {
+.contact.phone {
     background: #48cbe8;
 }
 
-#sidebar .contact.skype {
+.contact.skype {
     background: #51daf8;
 }
 
@@ -396,7 +423,7 @@ li {
     position: absolute;
 }
 
-#sidebar .icon.mail {
+.icon.mail {
     top: .6em;
     left: 2.45em;
 
@@ -407,7 +434,7 @@ li {
 	background-position: -173px -0px;
 }
 
-#sidebar .icon.phone {
+.icon.phone {
     top: .4em;
     left: 2.6em;
 
@@ -418,7 +445,7 @@ li {
 	background-position: -123px -141px;
 }
 
-#sidebar .icon.skype {
+.icon.skype {
     top: .5em;
     left: 2.5em;
 
@@ -799,6 +826,17 @@ textarea {
     color: #48cbe8;
 }
 
+#content .callme h1, #authoriz h1, #add-project > h1 {
+    display: block;
+    text-align: center;
+    color: white;
+    border-bottom: 17px solid #67dffa;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #48cbe8;
+    padding: 1.56em 0 1.4em;
+}
+
 #content .callme .left {
     float: left;
     width: 50%;
@@ -939,7 +977,7 @@ textarea {
 .btn.big {
     padding: 0 1.74em;
     margin-top: 1em;
-    margin-bottom: .65em;
+    margin-bottom: .3em;
 
     font-size: 3.6em;
     line-height: 1.3em;
@@ -1025,6 +1063,7 @@ textarea {
     height: 100%;
 
     background: rgba(88,105,122,.75);
+    display: none;
 }
 
 #add-project {
@@ -1040,6 +1079,15 @@ textarea {
     bottom: 0;
 
     box-shadow: 0 6px 13px rgba(13, 16, 7, 0.35);
+    display: none;
+}
+
+#add-project > h1 {
+    padding: .25em 1em 0 .5em;
+    font-family: fira_sansregular, sans-serif;
+    font-size: 2.5em;
+    text-align: left;
+    border-bottom: 9px solid #67dffa;
 }
 
 #add-project p {
@@ -1159,7 +1207,8 @@ textarea {
 	display: none;
 }
 
-#alert-added .close {
+#alert-added .close-green,
+#add-error .close-red {
     position: absolute;
     height: 11px;
     width: 11px;
@@ -1168,11 +1217,11 @@ textarea {
 	cursor: pointer;
 }
 
-#alert-added .close.green {
+#alert-added .close-green {
 	background-position: -173px -61px;
 }
 
-#add-project .close.red {
+#add-error .close-red {
 	background-position: -173px -50px;
 }
 
@@ -1215,7 +1264,7 @@ textarea {
 
 
 #add-error {
-	display: none;
+    display: none;
 }
 
 #error {
@@ -1224,7 +1273,7 @@ textarea {
 }
 
 
-#add-project .input-wrapper {
+.input-wrapper {
 	position: relative;
 }
 
@@ -1241,14 +1290,41 @@ textarea {
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	text-transform: lowercase;
 	right: 0;
 	white-space: nowrap;
 }
 
 #add-project .tooltip {
-	margin-right: 328px;
+	margin-right: 25.2em;
 } 
+
+.cli-name .tooltip {
+    margin-right: 15.3em;
+
+}
+
+.cli-email .tooltip {
+    margin-right: -11.2em;
+
+}
+
+.cli-message .tooltip {
+    margin-right: 31.5em;
+
+}
+
+.cli-capcha .tooltip.one {
+    margin-right: -10.3em;
+}
+
+.cli-capcha .tooltip.two {
+    margin-right: -11.6em;
+}
+
+#authoriz .tooltip {
+	margin-right: 33.2em;
+}
+
 
 
 .arrow.to-right {
@@ -1263,6 +1339,78 @@ textarea {
   	right: -8px;
 }
 
+.arrow.to-left {
+	display: block;
+	background-position: -173px -16px;
+  	height: 12px;
+  	width: 8px;
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	margin: auto;
+  	left: -8px;
+}
+
+#pop-nav {
+	width: 24em;
+	position: absolute;
+	top: 9em;
+	right: -2.7em;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 3px 9px rgba(0,0,0,0.35);
+	display: none;
+	z-index: 250;
+}
+
+
+.arr.to-top {
+	background-position: -0px -166px;
+  	height: 15px;
+  	width: 31px;
+  	position: absolute;
+  	top: 7.5em;
+  	right: 0.9em;
+  	z-index: 251;
+  	display: none;
+}
+
+.arr.blue.to-top {
+	background-position: -31px -166px;
+}
+
+#contacts-bottom {
+	width: 100%;
+	display: none;
+}
+
+#contacts-bottom .contact {
+	display: block;
+	width: 33.333333333%;
+	float: left;
+	padding-left: 0;
+	padding-bottom: 0.6em;
+	padding-top: 0.5em;
+	text-align: center;
+}
+
+#contacts-bottom .icon {
+	position: static;
+}
+
+#contacts-bottom .icon,
+#contacts-bottom span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#contacts-bottom span {
+	line-height: 1.25em;
+	padding-top: 0.35em;
+	padding-left: 1em;
+}
+
+
 
 @media only screen and (max-height: 484px) {
 	#add-project,
@@ -1276,6 +1424,56 @@ textarea {
 		padding-top: 1em;
 	}
 } 
+
+
+@media only screen and (min-width: 996px) {
+	#header .logo {
+		background: url("../img/logo.png") no-repeat center center #eff3f7;
+	}
+}
+
+
+@media only screen and (max-width: 995px) and (min-width: 690px) {
+	#menu {
+		display: block;
+	}
+
+	#header .logo {
+		background: url("../img/logo-pl.png") no-repeat center center #eff3f7;
+		width: 217px;
+		height: 51px;
+	}
+
+	#header .left {
+		width: 40%;
+	}
+
+	#header .right {
+		width: 60%;
+	}
+
+	#header .socials {
+		right: 8em;
+	}
+
+	#contacts-bottom {
+		display: block;
+	}
+	
+	#sidebar {
+		display: none;
+	}
+
+	#content {
+		width: 70em;
+		margin: 0 auto;
+		float: none;
+	}
+
+	#main .layout {
+		padding: 0;
+	}
+}
 
 @media only screen and (max-width: 768px) and (min-width: 321px) {
     #header {
@@ -1316,21 +1514,5 @@ textarea {
 }
 
 
-#content .callme h1, #authoriz h1, #add-project > h1 {
-    display: block;
-    text-align: center;
-    color: white;
-    border-bottom: 17px solid #67dffa;
-    -webkit-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-    background-color: #48cbe8;
-    padding: 1.56em 0 1.4em;
-}
 
-#add-project > h1 {
-    padding: .25em 1em 0 .5em;
-    font-family: fira_sansregular, sans-serif;
-    font-size: 2.5em;
-    text-align: left;
-    border-bottom: 9px solid #67dffa;
-}
+

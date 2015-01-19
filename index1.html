@@ -135,7 +135,7 @@
 		<div class="icon close"></div>
 		<form>
 			<div class="alert" id="add-error">
-				<div class="icon close.red"></div>
+				<div class="icon close-red"></div>
 				<h1>Ошибка!</h1>
 				<p>Невозможно добавить проект.</p>		
 			</div>
@@ -172,21 +172,13 @@
 
 	<div id="alert-added" class="block">
 		<div class="alert">
-			<div class="icon close.green"></div>
+			<div class="icon close-green"></div>
 			<h1>Ура!</h1>
 			<p>Проект успешно добавлен.</p>		
 		</div>
 	</div>
 
 	<script src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript">
-		$(
-			$('#file').change(function(){
-				var fname = $(this).val();
-				$('#file-name').html(fname);
-			})
-		);
-		
-	</script>
+	<script src="js/app.js"></script>
 </body>
 </html>
