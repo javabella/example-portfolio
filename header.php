@@ -32,6 +32,10 @@ $menu = array(
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+	<!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
 
 </head>
 <body>
@@ -43,10 +47,10 @@ $menu = array(
 				</div>
 				<div class="right">
 					<ul class="socials"> 
-						<li class="icon vk"><a href="/"></a></li> 
+						<li class="icon vk"><a href="https://vk.com/id9934451"></a></li> 
 						<li class="icon tw"><a href="/"></a></li>
 						<li class="icon fb"><a href="/"></a></li> 
-						<li class="icon git"><a href="/"></a></li>
+						<li class="icon git"><a href="https://github.com/javabella/loft-dz1"></a></li>
 					</ul>
 					<div class="icon menu" id="menu"></div>	
 					<div class="icon arr to-top"></div>

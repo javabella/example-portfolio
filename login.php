@@ -30,13 +30,13 @@
 						<form>
 							<p>Логин</p>
 							<div class="input-wrapper u-login">
-								<input id="error" type="text" name="user-login" placeholder="Введите логин" required>
+								<input type="text" name="user-login" placeholder="Введите логин">
 								<div class="tooltip">введите логин<div class="icon arrow to-right"></div></div>
 							</div>
 							
 							<p class="pass">Пароль</p>
 							<div class="input-wrapper u-pass">
-								<input id="error" type="password" name="user-password" placeholder="Введите пароль" required>
+								<input type="password" name="user-password" placeholder="Введите пароль">
 								<div class="tooltip">введите пароль<div class="icon arrow to-right"></div></div>
 							</div>
 							
@@ -49,3 +49,4 @@
 	
 	
 <?php include 'footer.php' ?>
+<script src="js/valid.js"></script>

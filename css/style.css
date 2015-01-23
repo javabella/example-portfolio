@@ -82,7 +82,7 @@ body {
 }
 
 body {
-    min-width: 320px;
+    /*min-width: 320px;*/min-width: 768px;
 
     font-family: fira_sansbook, sans-serif;
     font-size: 10px;
@@ -1302,7 +1302,7 @@ textarea {
     display: none;
 }
 
-#error {
+.error {
     border-color: #f97e76 !important;
     background-color: rgba(249, 126, 118, .33) !important;
 }
@@ -1318,7 +1318,7 @@ textarea {
     right: 0;
     bottom: 0;
 
-    display: block;
+    display: none;
     height: 1.5em;
     padding: .15em 1em .35em;
     margin: auto;

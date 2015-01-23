@@ -66,27 +66,27 @@
 
 		<p class="proname">Название проекта</p>
 		<div class="input-wrapper name">
-			<input id="error" type="text" name="proj-name" placeholder="Введите название" required>
+			<input type="text" name="proj-name" placeholder="Введите название" >
 			<div class="tooltip">введите название<div class="icon arrow to-right"></div></div>
 		</div>
 
 		<p>Картинка проекта</p>
-		<div class="input-wrapper-file" id="error">
+		<div class="input-wrapper-file" id="file">
 			<span id="file-name">Загрузите изображение</span>
-			<label for="file"><div class="icon load"></div></label>
-			<input id="file" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение">
+			<label for="file-inp"><div class="icon load"></div></label>
+			<input id="file-inp" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение" value="">
 			<div class="tooltip">изображение<div class="icon arrow to-right"></div></div>
 		</div>
 
 		<p>URL проекта</p>
 		<div class="input-wrapper url">
-			<input id="error" type="text" name="proj-url" placeholder="Добавьте ссылку" required>
+			<input  type="text" name="proj-url" placeholder="Добавьте ссылку">
 			<div class="tooltip">ссылка на проект<div class="icon arrow to-right"></div></div>
 		</div>
 		
 		<p>Описание</p>
 		<div class="input-wrapper descrip">
-			<textarea id="error" type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте" required></textarea>	
+			<textarea type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
 			<div class="tooltip">описание проекта<div class="icon arrow to-right"></div></div>
 		</div>
 		<input class="btn" type="submit" value="Добавить">	
@@ -102,4 +102,5 @@
 	</div>
 </div>
 
-<script src="js/app.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/valid.js"></script>
