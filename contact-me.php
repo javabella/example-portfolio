@@ -1,18 +1,20 @@
-<?php session_start(); ?>
+<?php 
+//session_start(); 
+?>
 
 <?php 
 	include 'header.php';  
 	include 'nav.php';
 	
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
-    $securimage = new Securimage();
+	//include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+    // $securimage = new Securimage();
 
 ?>
 
 <div id="content" id="call-me">
 	<div class="block callme">
 		<h1>У вас интересный проект? Напишите мне</h1>
-		<form action="action.php" method="POST">
+		<form action="/contact-process" method="POST">
 			<div class="clearfix">
 				<div class="left">
 					<p>Имя</p> 
@@ -74,5 +76,5 @@
 
 
 <?php include 'footer.php' ?>
-<script src="js/valid.js"></script>
+<script src="js/contact-me.js"></script>
 
