@@ -36,6 +36,16 @@ $menu = array(
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <!--[if (gte IE 6)&(lte IE 8)]>
+	  <script type="text/javascript" src="js/selectivizr-min.js"></script>
+	  <style>
+			#add-project,
+		    #alert-added {
+		        margin-top: 1%;
+		    }		
+	  </style>
+	<![endif]-->
+
 
 </head>
 <body>
