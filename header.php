@@ -43,14 +43,14 @@ $menu = array(
 		<div id="header">
 			<div class="layout clearfix">
 				<div class="left">
-					<div class="logo"></div>
+					<div class="logo" title="Главная страница"><a href="/">pro-verstalka.ru</a></div>
 				</div>
 				<div class="right">
 					<ul class="socials"> 
-						<li class="icon vk"><a href="https://vk.com/id9934451"></a></li> 
-						<li class="icon tw"><a href="/"></a></li>
-						<li class="icon fb"><a href="/"></a></li> 
-						<li class="icon git"><a href="https://github.com/javabella/loft-dz1"></a></li>
+						<li class="icon vk" title="Я в VKontakte!! Нажимай быстрее"><a href="https://vk.com/id9934451">я в Вконтакте</a></li> 
+						<li class="icon tw" title="Я в Twitter!! Нажимай быстрее"><a href="/">я в Твитере</a></li>
+						<li class="icon fb" title="Я в Facebook!! Нажимай быстрее"><a href="/">я в Фейсбуке</a></li> 
+						<li class="icon git" title="Я на GitHub!! Нажимай быстрее"><a href="https://github.com/javabella/loft-dz1">Я в Гитхабе</a></li>
 					</ul>
 					<div class="icon menu" id="menu"></div>	
 					<div class="icon arr to-top"></div>

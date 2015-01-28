@@ -1,14 +1,8 @@
-<?php 
-//session_start(); 
-?>
 
 <?php 
 	include 'header.php';  
 	include 'nav.php';
 	
-	//include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
-    // $securimage = new Securimage();
-
 ?>
 
 <div id="content" id="call-me">
@@ -51,10 +45,9 @@
 				<div class="right">
 					<div class="input-wrapper cli-capcha">
 						<input type="text" placeholder="Введите код" name="captcha_code">
-						<div class="tooltip one">Вы не ввели код<div class="icon arrow to-left"></div></div>
-						<div class="tooltip two">Неправильный код<div class="icon arrow to-left"></div></div>	
+						<div class="tooltip">Неправильный код<div class="icon arrow to-left"></div></div>	
 					</div>
-					<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ другое изображение ]</a>
+					<a id="another-captcha" href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ другое изображение ]</a>
 				</div>
 			</div>
 
@@ -67,7 +60,9 @@
 				</div>
 			</div>
 			
-			
+			<div class="info-block">
+				
+			</div>
 			
 		</form>
 	</div>

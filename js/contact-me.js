@@ -32,10 +32,31 @@ $(document).ready(function() {
             .done(function(msg){
                 console.log(msg);
                 if (msg === "OK") {
-                    var result = "<div>Спасибо за заявку! Мы вам перезвоним!</div>";
-                    form.append(result);
+                    var result = "Спасибо за заявку! Может быть когда-нибудь я Вам отвечу...";
+                    $('#another-captcha').click();
+                    $('input:not([class="btn"])').val('');
+                    $('textarea').val('');
+                    $('.info-block')
+                        .removeClass('no-success')
+                        .addClass('success')
+                        .css('display','block')
+                        .html(result);
                 } else {
-                    form.append(msg);
+                    if (msg.search('картинки') >= 0) {
+                        $('input[name="captcha_code"]')
+                            .addClass('error')
+                            .siblings('.tooltip').css('display', 'block');
+                    } else if (msg.search('Email') >= 0) {
+                        $('input[name="client-email"]')
+                            .addClass('error')
+                            .siblings('.tooltip').css('display', 'block');
+                    } else {
+                        $('.info-block')
+                        .removeClass('success')
+                        .addClass('no-success')
+                        .css('display','block')
+                        .html(msg);
+                    }
                 }
             })
             .always(function() {

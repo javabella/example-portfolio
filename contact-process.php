@@ -45,11 +45,23 @@
             </html>';
  
         if (!ValidateEmail($email)) {
-            $error = 'Email введен неправильно!';
+            $error = 'Email введен неправильно!<br/>';
         }
 
         if ($securimage->check($_POST['captcha_code']) == false) {
-            $error = 'Код с картинки введен неправильно!';
+            $error .= 'Код с картинки введен неправильно!<br/>';
+        }
+
+        if (empty($_POST['client-name'])) {
+            $error .= 'Вы не ввели имя.<br/>';
+        }
+
+        if (empty($_POST['client-name'])) {
+            $error .= 'Напишите Ваше имя.<br/>';
+        }
+
+        if (empty($_POST['client-message'])) {
+            $error .= 'Напишите Ваш вопрос.<br/>';
         }
  
         if (!$error) {
