@@ -1,3 +1,4 @@
+<!-- Add header and sidebar -->
 <?php 
 	include 'header.php';  
 	include 'nav.php';
@@ -50,6 +51,7 @@
 	</div>
 </div>
 
+<!-- Add footer -->
 <?php include 'footer.php' ?>
 
 <div id="mask"></div>
@@ -66,27 +68,27 @@
 
 		<p class="proname">Название проекта</p>
 		<div class="input-wrapper name">
-			<input type="text" name="proj-name" placeholder="Введите название" >
+			<input class="field" type="text" name="proj-name" placeholder="Введите название" >
 			<div class="tooltip">введите название<div class="icon arrow to-right"></div></div>
 		</div>
 
 		<p>Картинка проекта</p>
 		<div class="input-wrapper-file" id="file">
 			<span id="file-name">Загрузите изображение</span>
-			<label for="file-inp"><div class="icon load"></div></label>
-			<input id="file-inp" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение" value="">
+			<label id="lab" for="file-inp"><div class="icon load"></div></label>
+			<input class="field-file" id="file-inp" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение" value="">
 			<div class="tooltip">изображение<div class="icon arrow to-right"></div></div>
 		</div>
 
 		<p>URL проекта</p>
 		<div class="input-wrapper url">
-			<input  type="text" name="proj-url" placeholder="Добавьте ссылку">
+			<input class="field"  type="text" name="proj-url" placeholder="Добавьте ссылку">
 			<div class="tooltip">ссылка на проект<div class="icon arrow to-right"></div></div>
 		</div>
 		
 		<p>Описание</p>
 		<div class="input-wrapper descrip">
-			<textarea type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
+			<textarea class="field" type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
 			<div class="tooltip">описание проекта<div class="icon arrow to-right"></div></div>
 		</div>
 		<input class="btn" type="submit" value="Добавить">	
@@ -102,5 +104,6 @@
 	</div>
 </div>
 
+<!-- Add modal handler and validation -->
 <script src="js/modal.js"></script>
 <script src="js/valid.js"></script>

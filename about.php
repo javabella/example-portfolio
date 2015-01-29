@@ -1,3 +1,4 @@
+<!-- Add header and sidebar -->
 <?php 
 	include 'header.php';  
 	include 'nav.php';
@@ -22,10 +23,9 @@
 					<li>git</li>
 				</ul>
 			</div>
-				
 		</div>
-		
 	</div>
+
 	<div class="block experience">
 		<h1>Опыт работы</h1>
 		<div>
@@ -44,6 +44,7 @@
 			<p>Октябрь 2013 - Январь 2014</p>
 		</div>
 	</div>
+
 	<div class="block education">
 		<h1>Образование</h1>
 		<div>
@@ -59,4 +60,5 @@
 	</div>
 </div>
 
+<!-- Add footer -->
 <?php include 'footer.php' ?>

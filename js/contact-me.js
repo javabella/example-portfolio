@@ -34,14 +34,15 @@ $(document).ready(function() {
                 if (msg === "OK") {
                     var result = "Спасибо за заявку! Может быть когда-нибудь я Вам отвечу...";
                     $('#another-captcha').click();
-                    $('input:not([class="btn"])').val('');
-                    $('textarea').val('');
+                    $('.field').val('');
                     $('.info-block')
                         .removeClass('no-success')
                         .addClass('success')
                         .css('display','block')
                         .html(result);
                 } else {
+                    $('#another-captcha').click();
+                    $('input[name="captcha_code"]').val('');
                     if (msg.search('картинки') >= 0) {
                         $('input[name="captcha_code"]')
                             .addClass('error')
@@ -65,11 +66,10 @@ $(document).ready(function() {
         },
  
         validateForm: function (form){
-            var inputs = form.find('input:not([class="btn"]):not([type="file"])');
+            var inputs = form.find('.field');
             var valid = true;
-            var textars = form.find('textarea');
             var inputFile = form.find('#file');
-            var fields = $.merge($.merge(inputs, textars), inputFile);
+            var fields = $.merge(inputs, inputFile);
 
             
 
@@ -119,10 +119,9 @@ $(document).ready(function() {
 
         removeAllErrors: function(e) {
             var form = $(this);
-            var inputs = form.find('input:not([class="btn"])');
-            var inputFile = form.find('#file')
-            var textars = form.find('textarea');
-            var fields = $.merge($.merge(inputs, textars), inputFile);
+            var inputs = form.find('.field');
+            var inputFile = form.find('#file');
+            var fields = $.merge(inputs, inputFile);
 
             $.each(fields, function(index, val) {
                 var field = $(val);

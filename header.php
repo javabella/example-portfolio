@@ -1,3 +1,4 @@
+<!-- Create array of titles -->
 <?php
 $menu = array(
                 0 => array(0 => '/', 1=> 'Обо мне', 2 => '@_@'),
@@ -9,17 +10,20 @@ $menu = array(
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>
-	<?php foreach ($menu as $item) :?>
-		<?=$_SERVER['REQUEST_URI'] == $item[0] ? ($item[1].' '.$item[2].'  ') : ' ' ?>
-	<?endforeach;?> 
+		<!-- Insert title depending on link -->
+		<?php foreach ($menu as $item) :?>
+			<?=$_SERVER['REQUEST_URI'] == $item[0] ? ($item[1].' '.$item[2].'  ') : ' ' ?>
+		<?endforeach;?> 
 
-	  Lena - pro-verstalka</title>
+		Lena - pro-verstalka
+	</title>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
@@ -48,6 +52,7 @@ $menu = array(
 
 
 </head>
+
 <body>
 	<div class="wrapper">
 		<div id="header">
@@ -67,6 +72,7 @@ $menu = array(
 					<div id="pop-nav">
 						<div class="nav">
 							<ul>
+								<!-- Creation of menu items, determination of active link and insertion hrefs -->
 								<?php foreach ($menu as $item) :?>
 									<li <?=$_SERVER['REQUEST_URI'] == $item[0] ? 'class="active"' : '' ?>><a href="<?=$item[0] ?>"><?=$item[1]?></a></li>
 								<?endforeach;?> 
@@ -80,6 +86,7 @@ $menu = array(
 				<div class="half-line two"></div>
 			</div>
 		</div>
+	
 		<div id="main">
 			<div class="layout clearfix">
 				

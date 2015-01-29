@@ -1,8 +1,7 @@
-
+<!-- Add header and sidebar -->
 <?php 
 	include 'header.php';  
 	include 'nav.php';
-	
 ?>
 
 <div id="content" id="call-me">
@@ -13,7 +12,7 @@
 				<div class="left">
 					<p>Имя</p> 
 					<div class="input-wrapper cli-name">
-						<input type="text" name="client-name" placeholder="Как к Вам обращаться">
+						<input class="field" type="text" name="client-name" placeholder="Как к Вам обращаться">
 						<div class="tooltip">Вы не ввели имя<div class="icon arrow to-right"></div></div>
 					</div>
 					
@@ -21,20 +20,20 @@
 				<div class="right">
 					<p>Email</p>
 					<div class="input-wrapper cli-email">
-						<input type="email" name="client-email" placeholder="Куда мне писать">	
+						<input class="field" type="email" name="client-email" placeholder="Куда мне писать">	
 						<div class="tooltip">Вы не ввели email<div class="icon arrow to-left"></div></div>
 					</div>
 					
 				</div>
 			</div>
 			
+			
 			<p>Сообщение</p>
 			<div class="input-wrapper cli-message">
-				<textarea name="client-message" placeholder="Кратко в чем суть"></textarea>	
+				<textarea class="field" name="client-message" placeholder="Кратко в чем суть"></textarea>	
 				<div class="tooltip">Ваш вопрос<div class="icon arrow to-right"></div></div>
 			</div>
 			
-
 			<p class="smaller">Введите код, указанный на картинке</p>
 			<div class="clearfix capcha-row">
 				<div class="left">
@@ -44,13 +43,14 @@
 				</div>
 				<div class="right">
 					<div class="input-wrapper cli-capcha">
-						<input type="text" placeholder="Введите код" name="captcha_code">
+						<input class="field" type="text" placeholder="Введите код" name="captcha_code">
 						<div class="tooltip">Неправильный код<div class="icon arrow to-left"></div></div>	
 					</div>
 					<a id="another-captcha" href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ другое изображение ]</a>
 				</div>
 			</div>
-
+		
+		
 			<div class="clearfix btn-row">
 				<div class="left">
 					<input class="btn" type="submit" value="Отправить">
@@ -60,16 +60,16 @@
 				</div>
 			</div>
 			
-			<div class="info-block">
-				
-			</div>
+			
+			<div class="info-block"></div>
 			
 		</form>
 	</div>
 </div>
 
 
-
+<!-- Add footer -->
 <?php include 'footer.php' ?>
-<script src="js/contact-me.js"></script>
+<!-- Add js-ajax validation and sending letters-->
+<script src="js/contact-me.js"></script> 
 

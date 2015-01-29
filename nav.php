@@ -1,6 +1,7 @@
 <div id="sidebar">
 	<div class="nav">
 		<ul>
+			<!-- Creation of menu items, determination of active link and insertion hrefs -->
 			<?php foreach ($menu as $item) :?>
 				<li <?=$_SERVER['REQUEST_URI'] == $item[0] ? 'class="active"' : '' ?>><a href="<?=$item[0] ?>"><?=$item[1]?></a></li>
 			<?endforeach;?> 

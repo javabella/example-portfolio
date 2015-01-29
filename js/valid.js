@@ -20,15 +20,13 @@ $(document).ready(function() {
  
             if( app.validateForm(form) === false ) return false;
  
-            console.log('go in ajax');
         },
  
         validateForm: function (form){
-            var inputs = form.find('input:not([class="btn"]):not([type="file"])');
+            var inputs = form.find('.field');
             var valid = true;
-            var textars = form.find('textarea');
             var inputFile = form.find('#file');
-            var fields = $.merge($.merge(inputs, textars), inputFile);
+            var fields = $.merge(inputs, inputFile);
 
             
 
@@ -78,10 +76,9 @@ $(document).ready(function() {
 
         removeAllErrors: function(e) {
             var form = $(this);
-            var inputs = form.find('input:not([class="btn"])');
-            var inputFile = form.find('#file')
-            var textars = form.find('textarea');
-            var fields = $.merge($.merge(inputs, textars), inputFile);
+            var inputs = form.find('.field');
+            var inputFile = form.find('#file');
+            var fields = $.merge(inputs, inputFile);
 
             $.each(fields, function(index, val) {
                 var field = $(val);
