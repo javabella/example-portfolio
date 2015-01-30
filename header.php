@@ -16,8 +16,8 @@ $menu = array(
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Insert title depending on link -->
 	<title>
-		<!-- Insert title depending on link -->
 		<?php foreach ($menu as $item) :?>
 			<?=$_SERVER['REQUEST_URI'] == $item[0] ? ($item[1].' '.$item[2].'  ') : ' ' ?>
 		<?endforeach;?> 
