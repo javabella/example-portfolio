@@ -2,6 +2,9 @@ $(document).ready(function() {
 	$('#file-inp').change(function(){
 		$('#file-name').html($(this).val());
 		$('#file-inp').attr('value', $(this).val());
+		if ($(this).val() == '') {
+			$('#file-name').html('Ошибка. Повторите еще раз.');
+		}
 	});
 
 	$('#add-btn').on('click', function(){
@@ -12,8 +15,9 @@ $(document).ready(function() {
 	$('.icon.close').on('click', function(){
 		$('#add-project').fadeOut();
 		$('#mask').fadeOut();
-		$('input:not([class="btn"])').val('');
-		$('textarea').val('');
+		$('.field').val('');
+		$('#file-inp').attr('value', '');
+		$('#file-name').html('Загрузите изображение');
 		var errors = $('#add-project').find('.error')
 		.removeClass('error');
 		$.each(errors, function(index, val) {

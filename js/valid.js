@@ -3,6 +3,7 @@ $(document).ready(function() {
           
         initialize : function () {
             this.setUpListeners();
+            $('input, textarea').placeholder();
         },
   
         setUpListeners: function () {

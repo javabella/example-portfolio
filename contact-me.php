@@ -10,17 +10,17 @@
 		<form action="/contact-process" method="POST">
 			<div class="clearfix">
 				<div class="left">
-					<p>Имя</p> 
+					<label for="cli-name">Имя</label>
 					<div class="input-wrapper cli-name">
-						<input class="field" type="text" name="client-name" placeholder="Как к Вам обращаться">
+						<input id="cli-name" class="field" type="text" name="client-name" placeholder="Как к Вам обращаться">
 						<div class="tooltip">Вы не ввели имя<div class="icon arrow to-right"></div></div>
 					</div>
 					
 				</div>
 				<div class="right">
-					<p>Email</p>
+					<label for="cli-mail">Email</label>
 					<div class="input-wrapper cli-email">
-						<input class="field" type="email" name="client-email" placeholder="Куда мне писать">	
+						<input id="cli-mail" class="field" type="email" name="client-email" placeholder="Куда мне писать">	
 						<div class="tooltip">Вы не ввели email<div class="icon arrow to-left"></div></div>
 					</div>
 					
@@ -28,13 +28,13 @@
 			</div>
 			
 			
-			<p>Сообщение</p>
+			<label for="cli-mes">Сообщение</label>
 			<div class="input-wrapper cli-message">
-				<textarea class="field" name="client-message" placeholder="Кратко в чем суть"></textarea>	
+				<textarea id="cli-mes" class="field" name="client-message" placeholder="Кратко в чем суть"></textarea>	
 				<div class="tooltip">Ваш вопрос<div class="icon arrow to-right"></div></div>
 			</div>
 			
-			<p class="smaller">Введите код, указанный на картинке</p>
+			<label for="cli-cap" class="smaller">Введите код, указанный на картинке</label>
 			<div class="clearfix capcha-row">
 				<div class="left">
 					<div class="capcha">
@@ -43,7 +43,7 @@
 				</div>
 				<div class="right">
 					<div class="input-wrapper cli-capcha">
-						<input class="field" type="text" placeholder="Введите код" name="captcha_code">
+						<input id="cli-cap" class="field" type="text" placeholder="Введите код" name="captcha_code">
 						<div class="tooltip">Неправильный код<div class="icon arrow to-left"></div></div>	
 					</div>
 					<a id="another-captcha" href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ другое изображение ]</a>
@@ -70,6 +70,9 @@
 
 <!-- Add footer -->
 <?php include 'footer.php' ?>
+<!-- Add cross-browser placeholder -->
+<script src="js/jquery.placeholder.js"></script>
 <!-- Add js-ajax validation and sending letters-->
 <script src="js/contact-me.js"></script> 
+
 

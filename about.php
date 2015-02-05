@@ -6,7 +6,7 @@
 
 <div id="content" id="about">
 	<div class="block info">
-		<h1>Основная информация</h1>
+		<h2 class="title">Основная информация</h2>
 		<div>
 			<div class="photo-profile"></div>
 			<p><b>Меня зовут: </b>Павлова Елена Михайловна</p>
@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="block experience">
-		<h1>Опыт работы</h1>
+		<h2 class="title">Опыт работы</h2>
 		<div>
 			<div class="icon work"></div>
 			<p><b>"ИП Палий" - Верстальщик</b></p>
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="block education">
-		<h1>Образование</h1>
+		<h2 class="title">Образование</h2>
 		<div>
 			<div class="icon stud"></div>
 			<p><b>Законченное высшее. СПБГПУ Политех</b></p>

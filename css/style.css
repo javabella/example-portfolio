@@ -642,7 +642,6 @@ li {
 	border-color: white;
 }
 
-,
 .nav a::before,
 #pop-nav a::before,
 .nav a::after,
@@ -691,6 +690,13 @@ li {
 #pop-nav a:hover::before,
 .nav a:hover::after,
 #pop-nav a:hover::after {
+	opacity: 1;
+}
+
+.nav a:hover:before,
+#pop-nav a:hover:before,
+.nav a:hover:after,
+#pop-nav a:hover:after {
 	opacity: 1;
 }
 
@@ -848,20 +854,23 @@ li {
 	width: 65em;
 }
 
-#content h1 {
-	display: inline;
-	padding: .464em .8518em;
+#content .title,
+#content h1  {
+	display: inline-block;
+	padding: 0.05em .8em .464em;
 
 	color: #3ba8c0;
 	border-bottom: 2px solid #3ba8c0;
+	font-size: 2.7em;
 }
 
 #content > div > div {
 	padding: 0 2em;
 }
 
-#content h1 + div {
-	margin-top: 5em;
+#content h1 + div,
+#content .title + div {
+	margin-top: 3.5em;
 }
 
 #content p {
@@ -905,7 +914,7 @@ li {
 
 #content .info > div {
 	padding-left: 26em;
-	margin-top: 3.2em;
+	margin-top: 1.9em;
 }
 
 #content .info p {
@@ -1178,13 +1187,14 @@ li {
 	margin: 4.3em auto 0;
 }
 
-#content .callme p,
-#authoriz p {
+#content .callme label,
+#authoriz label {
 	font-family: fira_sanslight, sans-serif;
 	font-size: 1.9em;
 	line-height: 1.45em;
 
 	color: #959aa8;
+	display: block;
 }
 
 #content .callme .smaller {
@@ -1233,9 +1243,13 @@ textarea {
 	color: #48cbe8;
 }
 
+.placeholder {
+	color: #48cbe8;
+}
+
 #content .callme h1,
 #authoriz h1,
-#add-project > h1 {
+#add-project > h2 {
 	display: block;
 	padding: 1.56em 0 1.4em;
 
@@ -1267,7 +1281,7 @@ textarea {
 }
 
 #content .callme textarea {
-	height: 14em;
+	height: 13.5em;
 }
 
 .btn {
@@ -1314,7 +1328,7 @@ textarea {
 	border-bottom: 2px solid #849db5;
 }
 
-#content .callme form > p {
+#content .callme form > label {
 	margin-top: .8em;
 }
 
@@ -1366,7 +1380,7 @@ textarea {
 	border-bottom: 15px solid #67dffa;
 }
 
-#authoriz p {
+#authoriz label {
 	padding: .5em 0 .1em;
 
 	font-size: 3.6em;
@@ -1507,7 +1521,7 @@ textarea {
 			box-shadow: 0 6px 13px rgba(13, 16, 7, .35);
 }
 
-#add-project > h1 {
+#add-project > h2 {
 	padding: .25em 1em 0 .5em;
 
 	font-family: fira_sansregular, sans-serif;
@@ -1518,7 +1532,7 @@ textarea {
 	border-bottom: 9px solid #67dffa;
 }
 
-#add-project p {
+#add-project form > label {
 	padding-top: .4em;
 
 	font-family: fira_sansbook, sans-serif;
@@ -1527,6 +1541,7 @@ textarea {
 	text-align: left;
 
 	color: #959aa8;
+	display: block;
 }
 
 #add-project .proname {

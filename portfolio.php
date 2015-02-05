@@ -57,7 +57,7 @@
 <div id="mask"></div>
 	
 <div id="add-project" class="block">
-	<h1>Добавление проекта</h1>
+	<h2>Добавление проекта</h2>
 	<div class="icon close"></div>
 	<form>
 		<div class="alert" id="add-error">
@@ -66,13 +66,13 @@
 			<p>Невозможно добавить проект.</p>		
 		</div>
 
-		<p class="proname">Название проекта</p>
+		<label for="p-name" class="proname">Название проекта</label>
 		<div class="input-wrapper name">
-			<input class="field" type="text" name="proj-name" placeholder="Введите название" >
+			<input id="p-name" class="field" type="text" name="proj-name" placeholder="Введите название" >
 			<div class="tooltip">введите название<div class="icon arrow to-right"></div></div>
 		</div>
 
-		<p>Картинка проекта</p>
+		<label>Картинка проекта</label>
 		<div class="input-wrapper-file" id="file">
 			<span id="file-name">Загрузите изображение</span>
 			<label id="lab" for="file-inp"><div class="icon load"></div></label>
@@ -80,15 +80,15 @@
 			<div class="tooltip">изображение<div class="icon arrow to-right"></div></div>
 		</div>
 
-		<p>URL проекта</p>
+		<label for="p-url" >URL проекта</label>
 		<div class="input-wrapper url">
-			<input class="field"  type="text" name="proj-url" placeholder="Добавьте ссылку">
+			<input id="p-url" class="field"  type="text" name="proj-url" placeholder="Добавьте ссылку">
 			<div class="tooltip">ссылка на проект<div class="icon arrow to-right"></div></div>
 		</div>
 		
-		<p>Описание</p>
+		<label for="p-desc">Описание</label>
 		<div class="input-wrapper descrip">
-			<textarea class="field" type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
+			<textarea id="p-desc" class="field" type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
 			<div class="tooltip">описание проекта<div class="icon arrow to-right"></div></div>
 		</div>
 		<input class="btn" type="submit" value="Добавить">	
@@ -104,6 +104,9 @@
 	</div>
 </div>
 
+<!-- Add cross-browser placeholder -->
+<script src="js/jquery.placeholder.js"></script>
 <!-- Add modal handler and validation -->
 <script src="js/modal.js"></script>
 <script src="js/valid.js"></script>
+
