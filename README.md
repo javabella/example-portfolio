@@ -1,2 +1,2 @@
-# loft-dz1
-loftschool-dz1
+# Пример портфолио
+http://pro-verstalka.ru
