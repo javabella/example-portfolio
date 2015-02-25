@@ -7,11 +7,11 @@
 				</div>
 				<div class="contact mail">
 					<div class="icon mail"></div>
-					<span><a href="mailto:isuzu69@gmail.com">isuzu69@gmail.com</a></span>
+					<span><a href="mailto:trololo@gmail.com">trololo@gmail.com</a></span>
 				</div>
 				<div class="contact skype">
 					<div class="icon skype"></div>
-					<span><a href="skype:isuzu69">isuzu69</a></span>
+					<span><a href="skype:trololo">trololo</a></span>
 				</div>
 			</div>
 		</div>

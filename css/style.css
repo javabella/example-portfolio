@@ -1976,13 +1976,6 @@ textarea {
 }
 
 
-@media only screen and (min-width: 996px) {
-	#header .logo {
-		background: url("../img/logo.png") no-repeat center center #eff3f7;
-	}
-}
-
-
 /*@media only screen and (max-width: 995px) and (min-width: 737px) {*/
 @media only screen and (max-width: 995px) {
 	#menu {
@@ -1996,8 +1989,6 @@ textarea {
 	#header .logo {
 		width: 217px;
 		height: 51px;
-
-		background: url("../img/logo-pl.png") no-repeat center center #eff3f7;
 	}
 
 	#header .left {
@@ -2167,8 +2158,6 @@ textarea {
 	#header .logo {
 		width: 136px;
 		height: 33px;
-
-		background: url("../img/logo-mb.png") no-repeat center center #eff3f7;
 	}
 
 	#header {
