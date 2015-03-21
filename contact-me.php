@@ -1,4 +1,3 @@
-<!-- Add header and sidebar -->
 <?php 
 	include 'header.php';  
 	include 'nav.php';

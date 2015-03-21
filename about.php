@@ -1,10 +1,9 @@
-<!-- Add header and sidebar -->
 <?php 
 	include 'header.php';  
 	include 'nav.php';
 ?>
 
-<div id="content" id="about">
+<div id="content">
 	<div class="block info">
 		<h2 class="title">Основная информация</h2>
 		<div>

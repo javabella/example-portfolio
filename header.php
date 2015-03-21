@@ -1,4 +1,3 @@
-<!-- Create array of titles -->
 <?php
 $menu = array(
                 0 => array(0 => '/', 1=> 'Обо мне', 2 => '@_@'),
