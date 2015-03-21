@@ -3,7 +3,7 @@
 	include 'nav.php';
 ?>
 
-<div id="content" id="call-me">
+<div id="content">
 	<div class="block callme">
 		<h1>У вас интересный проект? Напишите мне</h1>
 		<form action="/contact-process" method="POST">
@@ -74,4 +74,5 @@
 <!-- Add js-ajax validation and sending letters-->
 <script src="js/contact-me.js"></script> 
 
-
+</body>
+</html>

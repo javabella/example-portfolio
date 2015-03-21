@@ -3,7 +3,7 @@
 	include 'nav.php';
 ?>
 
-<div id="content" id="my-works">
+<div id="content">
 	<div class="block works">
 		<h1>Мои работы</h1>
 		<div>
@@ -74,8 +74,8 @@
 		<label>Картинка проекта</label>
 		<div class="input-wrapper-file" id="file">
 			<span id="file-name">Загрузите изображение</span>
-			<label id="lab" for="file-inp"><div class="icon load"></div></label>
-			<input class="field-file" id="file-inp" type="file" name="proj-img" accept="image/*" placeholder="Загрузите изображение" value="">
+			<label id="lab" for="file-inp"><span class="icon load"></span></label>
+			<input class="field-file" id="file-inp" type="file" name="proj-img" accept="image/*" >
 			<div class="tooltip">изображение<div class="icon arrow to-right"></div></div>
 		</div>
 
@@ -87,7 +87,7 @@
 		
 		<label for="p-desc">Описание</label>
 		<div class="input-wrapper descrip">
-			<textarea id="p-desc" class="field" type="text" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
+			<textarea id="p-desc" class="field" name="proj-descrip" placeholder="Пара слов о Вашем проекте"></textarea>	
 			<div class="tooltip">описание проекта<div class="icon arrow to-right"></div></div>
 		</div>
 		<input class="btn" type="submit" value="Добавить">	
@@ -108,4 +108,7 @@
 <!-- Add modal handler and validation -->
 <script src="js/modal.js"></script>
 <script src="js/valid.js"></script>
+
+</body>
+</html>
 

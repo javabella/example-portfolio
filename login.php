@@ -46,10 +46,28 @@
 				</div>		
 			</div>
 		</div>	
-	
-<!-- Add footer -->
-<?php include 'footer.php' ?>
+	</div>
+
+
+	<div id="footer">
+		<div class="line clearfix">
+			<div class="half-line one"></div>
+			<div class="half-line two"></div>
+		</div>
+		<div class="layout">
+			<div class="icon login"><a href="login"></a></div>
+			<p class="copyright">&#169; 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
+		</div>
+	</div>	
+
+<script src="js/jquery-1.11.2.min.js"></script>
+
 <!-- Add cross-browser placeholder -->
 <script src="js/jquery.placeholder.js"></script>
 <!-- Add validation -->
 <script src="js/valid.js"></script>
+
+
+
+</body>
+</html>
